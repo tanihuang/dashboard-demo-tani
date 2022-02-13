@@ -1,8 +1,8 @@
 import {
   BrowserRouter,
   Routes,
-  Route
-} from "react-router-dom";
+  Route,
+} from 'react-router-dom';
 import Home from './pages/index';
 import './styles/index.scss';
 
