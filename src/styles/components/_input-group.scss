@@ -1,0 +1,27 @@
+.search-input-group {
+  margin-bottom: 15px;
+  .input-group-text {
+    background: #f3f4f6;
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+    border: none;
+    padding: 8px 15px;
+    line-height: 24px;
+    svg {
+      color: #9ca3af;
+      font-size: rem(14px);
+    }
+  }
+  input {
+    border-left: none;
+    border: none;
+    background: #f3f4f6;
+    padding: 8px 0;
+    &::placeholder {
+      font-size: rem(14px);
+    }
+    &:active, &:focus {
+      background: #f3f4f6;
+    }
+  }
+}

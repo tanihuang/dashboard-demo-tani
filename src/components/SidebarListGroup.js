@@ -19,11 +19,11 @@ const SidebarListGroup = () => {
       </Button>
       <Collapse in={open}>
         <ListGroup as="ul">
-          <ListGroup.Item as="li" active>
-            <BsFillTagFill/>item1
+          <ListGroup.Item as="li">
+            <BsFillTagFill/>item1<div className="num">2</div>
           </ListGroup.Item>
-          <ListGroup.Item as="li" disabled>
-            <BsFillTagFill/>item1
+          <ListGroup.Item as="li">
+            <BsFillTagFill/>item1<div className="num">2</div>
           </ListGroup.Item>
         </ListGroup>
       </Collapse>

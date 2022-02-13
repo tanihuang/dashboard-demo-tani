@@ -1,0 +1,34 @@
+.datatable {
+  tr {
+    th {
+      font-size: rem(14px);
+      border: none;
+      border-bottom: 1px solid #f3f4f6;
+      height: 35px;
+      line-height: 35px;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+    td {
+      font-size: rem(14px);
+      color: #000;
+      border: none;
+      padding: 8px 15px 8px 0;
+      text-align: left;
+      vertical-align: middle;
+      .icon-logo {
+        width: 45px;
+        height: auto;
+        margin-left: -10px;
+        vertical-align: middle;
+      }
+      div {
+        vertical-align: middle;
+      }
+    }
+    &:hover td {
+      background: #f3f4f6;
+    }
+  }
+}

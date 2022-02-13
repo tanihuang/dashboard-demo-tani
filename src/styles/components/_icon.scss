@@ -1,0 +1,17 @@
+.icon-tag {
+  background: #9ca3af;
+  color: #000;
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 4px;
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+.icon-more {
+  color: #000;
+  float: right;
+  font-size: rem(14px);
+  line-height: 35px;
+  margin-top: 10px;
+}

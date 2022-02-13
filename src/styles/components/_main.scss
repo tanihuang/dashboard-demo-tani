@@ -1,3 +1,20 @@
 .main {
   width: calc(100% - 220px);
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+  .nav {
+    margin-bottom: 15px;
+    h1 {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0;
+      }
+    }
+    button {
+      @include media-breakpoint-down(sm) {
+        position: absolute;
+        right: 15px;
+      }
+    }
+  }
 }
