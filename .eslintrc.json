@@ -30,6 +30,7 @@
   },
   "plugins": [],
   "rules": {
+    "react/forbid-prop-types": "off",
     "react/jsx-filename-extension": "off",
     "react/jsx-one-expression-per-line": "warn",
     "react/react-in-jsx-scope": "off"

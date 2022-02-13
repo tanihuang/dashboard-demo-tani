@@ -4,6 +4,8 @@
   display: inline-block;
   padding: 0 5px;
   border-radius: 4px;
+  max-width: 74px;
+  white-space: nowrap;
   &:not(:last-child) {
     margin-right: 5px;
   }
