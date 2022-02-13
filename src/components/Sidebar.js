@@ -7,23 +7,38 @@ import {
 } from 'react-icons/fa';
 import { BsPlusLg } from 'react-icons/bs';
 import { FcMenu } from 'react-icons/fc';
-import icon from '../assets/images/img-logo-react.svg';
+import { useNavigate } from 'react-router-dom';
 import SidebarListGroup from './SidebarListGroup';
+import labelList from '../mockData/labelList';
+import { getListLength } from '../helpers/contactList';
+import icon from '../assets/images/img-logo-react.svg';
 
 const Sidebar = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const navigate = useNavigate();
 
-  const handleTogglerClick = () => {
+  const toggleMenu = (e) => {
+    e.stopPropagation();
     setIsMenuOpened(!isMenuOpened);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpened(false);
+  };
+
+  const handleSidebarClick = () => {
+    closeMenu();
+  };
+
   return (
-    <div className={classNames(
-      {
-        show: isMenuOpened,
-      },
-      'sidebar',
-    )}
+    <div
+      className={classNames(
+        {
+          show: isMenuOpened,
+        },
+        'sidebar',
+      )}
+      onClick={handleSidebarClick}
     >
       <h1 className="d-none d-md-inline-block">
         <img src={icon} alt="" />
@@ -33,40 +48,50 @@ const Sidebar = () => {
         <FaPlus />
         建立聯絡人
       </Button>
-      <button type="button" className="navbar-toggler d-flex d-md-none" onClick={handleTogglerClick}>
+      <button type="button" className="navbar-toggler d-flex d-md-none" onClick={toggleMenu}>
         <FcMenu />
       </button>
       <Nav
-        defaultActiveKey="/home"
+        defaultActiveKey="link-1"
         as="ul"
         className={classNames(
           {
             show: isMenuOpened,
           },
         )}
+        onClick={(e) => e.stopPropagation()}
       >
         <Nav.Item as="li">
-          <Nav.Link eventKey="link-1" active onClick={handleTogglerClick}>
+          <Nav.Link
+            eventKey="link-1"
+            active
+            onClick={() => {
+              navigate('/');
+              closeMenu();
+            }}
+          >
             <FaUser />
             聯絡人
-            <div className="num">3</div>
+            <div className="num">
+              {getListLength()}
+            </div>
           </Nav.Link>
         </Nav.Item>
         <Nav.Item as="li">
-          <SidebarListGroup />
-          <Nav.Link eventKey="link-2">
+          <SidebarListGroup list={labelList} onItemClick={closeMenu} />
+          <Nav.Link eventKey="link-2" onClick={closeMenu}>
             <BsPlusLg />
             建立標籤
           </Nav.Link>
         </Nav.Item>
         <Nav.Item as="li">
-          <Nav.Link eventKey="link-3">
+          <Nav.Link eventKey="link-3" onClick={closeMenu}>
             <FaTrashAlt />
             垃圾桶
           </Nav.Link>
         </Nav.Item>
         <Nav.Item as="li">
-          <Nav.Link eventKey="link-3">
+          <Nav.Link eventKey="link-4" onClick={closeMenu}>
             <FaHandsHelping />
             產生一個聯絡人
           </Nav.Link>
