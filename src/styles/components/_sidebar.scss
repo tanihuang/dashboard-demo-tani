@@ -1,0 +1,26 @@
+.sidebar {
+  width: 220px;
+  .nav {
+    flex-direction: column;
+    .nav-item {
+      &:not(:last-child) {
+        border-bottom: 1px solid #f3f4f6;
+      }
+      .nav-link, .btn, .list-group-item {
+        color: #000;
+        font-size: rem(14px);
+        padding: 10px 15px;
+        border: none;
+        background: none;
+        line-height: 24px;
+        width: 100%;
+        text-align: left;
+        svg {
+          color: #9ca3af;
+          margin-right: 10px;
+          font-size: rem(14px);
+        }
+      }
+    }
+  }
+}

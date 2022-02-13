@@ -1,0 +1,25 @@
+.btn {
+  font-size: rem(14px);
+}
+.btn-add {
+  border-radius: 25px;
+  width: 124px;
+  background: #fff;
+  height: 35px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  color: #000;
+  position: relative;
+  border: none;
+  svg {
+    margin-right: 5px;
+    color: #007bff;
+    font-size: rem(16px);
+  }
+  &:hover {
+    background: #007bff;
+    svg {
+      color: #fff;
+    }
+  }
+}
+

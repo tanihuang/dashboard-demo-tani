@@ -1,0 +1,10 @@
+h1 {
+  font-size: rem(22px);
+  >* {
+    vertical-align: middle;
+  }
+  img {
+    height: auto;
+    width: 45px;
+  }
+}
